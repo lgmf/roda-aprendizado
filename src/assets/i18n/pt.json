@@ -1,0 +1,13 @@
+{
+	"Login": "Entrar",
+	"TestService": "Testar Serviço",
+	"TestDialog": "Testar Dialog",
+	"Logout": "Sair",
+	"Cancel": "Cancelar",
+	"Save": "Salvar",
+	"ObrigatoryField": "Este campo é obrigatório",
+	"ConfirmDialog": "Caixa de Confirmação",
+	"SelectAnOptionAndOpendTheConsole": "Selecione uma opção e abra o console",
+	"Ok": "Ok",
+	"ChangeLanguageTo": "Mudar idioma para:"
+}

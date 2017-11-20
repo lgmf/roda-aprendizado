@@ -1,0 +1,21 @@
+<div>
+	<a mat-fab (click)="addUser()">
+		<mat-icon>add</mat-icon>
+	</a>
+
+	<div class="container">
+		<mat-card class="card" *ngFor="let user of users">
+			<mat-card-header>
+				<mat-card-title>{{ user.name }}</mat-card-title>
+				<mat-card-subtitle *ngIf="user.location">{{user.location}}</mat-card-subtitle>
+			</mat-card-header>
+			<img mat-card-image [src]="user.avatar_url">
+			<mat-card-content>
+				<p>
+					{{user.bio || 'No description yet :('}}
+				</p>
+			</mat-card-content>
+		</mat-card>
+	</div>
+
+</div>

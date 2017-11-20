@@ -1,0 +1,6 @@
+<h3>{{title | translate}}</h3>
+<p>{{message | translate}}</p>
+<div style='float: right;'>
+	<button class="btn-cancel" mat-button (click)="dialogRef.close()">{{ (buttonCancel | translate).toUpperCase() }}</button>
+	<button class="btn-confirm" mat-button (click)="dialogRef.close(true)" color="primary">{{ (buttonOk | translate).toUpperCase() }}</button>
+</div>

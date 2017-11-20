@@ -1,0 +1,6 @@
+.container {
+	display: flex;
+	justify-content: center !important;
+	margin: 45vh 0 !important;
+}
+

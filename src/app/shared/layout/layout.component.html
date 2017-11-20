@@ -1,0 +1,20 @@
+<mat-toolbar color="primary" class="mat-elevation-z4">
+
+	<button mat-raised-button (click)="viewUsers()" color="accent" class="button">
+		<span>{{'TestService' | translate}}</span>
+	</button>
+	<button mat-raised-button (click)="openDialog()" color="accent" class="button">
+		<span>{{'TestDialog' | translate}}</span>
+	</button>
+	<button mat-raised-button (click)="logoff()" color="accent" class="button">
+		<span>{{'Logout' | translate}}</span>
+	</button>
+	<button mat-raised-button (click)="changeLanguage()" color="accent" class="button">
+		<span>{{'ChangeLanguageTo' | translate}}
+			<span>{{translate.currentLang === 'en' ? 'PT' : 'EN'}}</span>
+		</span>
+	</button>
+
+</mat-toolbar>
+
+<router-outlet></router-outlet>

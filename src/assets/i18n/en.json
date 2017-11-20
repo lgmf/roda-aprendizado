@@ -1,0 +1,13 @@
+{
+	"Login": "Login",
+	"TestService": "Test the Service",
+	"TestDialog": "Test the Dialog",
+	"Logout": "Logoff",
+	"Cancel": "Cancel",
+	"Save": "Save",
+	"ObrigatoryField": "This field is obrigatory",
+	"ConfirmDialog": "Confirmation Dialog",
+	"SelectAnOptionAndOpendTheConsole": "Select an option and open console",
+	"Ok": "Ok",
+	"ChangeLanguageTo": "Change language to:"
+}

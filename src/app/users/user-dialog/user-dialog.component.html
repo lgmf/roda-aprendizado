@@ -1,0 +1,10 @@
+<div class="container">
+	<form [formGroup]="form" (ngSubmit)="save()">
+		<mat-form-field class="full-width">
+			<input matInput placeholder="@username" formControlName="username" required [(ngModel)]="username">
+			<mat-error *ngIf="form.get('username').hasError('required')" style="font-size: 85%;">{{'ObrigatoryField' | translate}}</mat-error>
+		</mat-form-field>
+		<button type="button" class="btn-cancel" mat-button (click)="dialogRef.close()">{{('Cancel' | translate).toUpperCase()}}</button>
+		<button type="submit" class="btn-ok" mat-button color="primary" [disabled]="!form.dirty">{{('Save' | translate).toUpperCase()}}</button>
+	</form>
+</div>
