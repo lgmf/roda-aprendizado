@@ -3,14 +3,16 @@ import { Routes, RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { LayoutComponent } from './shared/layout/layout.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './core/login/login.component';
 import { UserListComponent } from './users/user-list/user-list.component';
 
 import { LoginAuthGuard } from './shared/services/auth/auth-login.guard';
 import { AppAuthGuard } from './shared/services/auth/auth-app.guard';
+import { RegisterComponent } from './core/register/register.component';
 
 const appRoutes: Routes = [
 	{ path: 'login', component: LoginComponent, canActivate: [LoginAuthGuard] },
+	{ path: 'register', component: RegisterComponent },
 	{ path: '', component: LayoutComponent, canActivate: [AppAuthGuard], children: [
 		{ path: 'users', component: UserListComponent }
 	] },

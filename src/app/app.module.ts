@@ -9,16 +9,21 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
 
 import { SharedModule } from './shared/shared.module';
 import { UsersModule } from './users/users.module';
 
 import { AppRouting } from './app.routing';
+import { environment } from '../environments/environment';
 
 import { LoginAuthGuard } from './shared/services/auth/auth-login.guard';
 import { HttpInterceptor } from './shared/services/http/http-interceptor.service';
+import { CoreModule } from './core/core.module';
+
 
 export function HttpInterceptorFactory(backend: XHRBackend, options: RequestOptions, router: Router, injector: Injector) {
 	return new HttpInterceptor(backend, options, router, injector);
@@ -36,6 +41,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 		HttpModule,
 		HttpClientModule,
 		AppRouting,
+		CoreModule,
 		SharedModule,
 		UsersModule,
 		FormsModule,
@@ -45,14 +51,15 @@ export function HttpLoaderFactory(http: HttpClient) {
 				useFactory: HttpLoaderFactory,
 				deps: [HttpClient]
 			}
-		})
+		}),
+		AngularFireModule.initializeApp(environment.firebase),
+		AngularFireDatabaseModule		
 	],
 	declarations: [
-		AppComponent,
-		LoginComponent
+		AppComponent				
 	],
 	providers: [
-		{ provide: Http, useFactory: HttpInterceptorFactory, deps: [XHRBackend, RequestOptions, Router, Injector] },
+		{ provide: Http, useFactory: HttpInterceptorFactory, deps: [XHRBackend, RequestOptions, Router, Injector] }
 	],
 	bootstrap: [
 		AppComponent
