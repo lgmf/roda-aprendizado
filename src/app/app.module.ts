@@ -23,6 +23,7 @@ import { environment } from '../environments/environment';
 import { LoginAuthGuard } from './shared/services/auth/auth-login.guard';
 import { HttpInterceptor } from './shared/services/http/http-interceptor.service';
 import { CoreModule } from './core/core.module';
+import { ParticipantsModule } from './participants/participants.module';
 
 
 export function HttpInterceptorFactory(backend: XHRBackend, options: RequestOptions, router: Router, injector: Injector) {
@@ -53,7 +54,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 			}
 		}),
 		AngularFireModule.initializeApp(environment.firebase),
-		AngularFireDatabaseModule		
+		AngularFireDatabaseModule,
+		ParticipantsModule		
 	],
 	declarations: [
 		AppComponent				

@@ -9,5 +9,7 @@
 	"ConfirmDialog": "Confirmation Dialog",
 	"SelectAnOptionAndOpendTheConsole": "Select an option and open console",
 	"Ok": "Ok",
-	"ChangeLanguageTo": "Change language to:"
+	"ChangeLanguageTo": "Change language to:",
+	"ShareIdea":"Share your Idea",
+	"Send":"Send"
 }
