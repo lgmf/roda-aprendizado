@@ -9,20 +9,18 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-
 import { AppComponent } from './app.component';
 
 import { SharedModule } from './shared/shared.module';
 import { UsersModule } from './users/users.module';
 
 import { AppRouting } from './app.routing';
-import { environment } from '../environments/environment';
 
 import { LoginAuthGuard } from './shared/services/auth/auth-login.guard';
 import { HttpInterceptor } from './shared/services/http/http-interceptor.service';
 import { CoreModule } from './core/core.module';
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment.prod';
 
 
 export function HttpInterceptorFactory(backend: XHRBackend, options: RequestOptions, router: Router, injector: Injector) {
@@ -52,8 +50,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 				deps: [HttpClient]
 			}
 		}),
-		AngularFireModule.initializeApp(environment.firebase),
-		AngularFireDatabaseModule		
+		AngularFireModule.initializeApp(environment.firebase)
 	],
 	declarations: [
 		AppComponent				

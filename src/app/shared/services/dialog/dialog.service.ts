@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Rx';
 
 import { ConfirmDialogComponent } from '../../components/confirm-dialog/confirm-dialog.component';
 import { UserDialogComponent } from '../../../users/user-dialog/user-dialog.component';
+import { LoginWithCodeDialogComponent } from '../../../core/login-with-code-dialog/login-with-code-dialog.component';
 
 @Injectable()
 export class DialogsService {
@@ -28,6 +29,14 @@ export class DialogsService {
 	public openUserDialog(): Observable<any> {
 		let dialogRef: MatDialogRef<UserDialogComponent>;
 		dialogRef = this.dialog.open(UserDialogComponent);
+
+		return dialogRef.afterClosed();
+	}
+
+	public openEnterWithCodeDialog(): Observable<any> {
+
+		let dialogRef: MatDialogRef<LoginWithCodeDialogComponent>;
+		dialogRef = this.dialog.open(LoginWithCodeDialogComponent);
 
 		return dialogRef.afterClosed();
 	}

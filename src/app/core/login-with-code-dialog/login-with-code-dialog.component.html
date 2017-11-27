@@ -1,0 +1,15 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="enter()" fxLayout="column">
+
+    <mat-form-field class="full-width" fxFlex="100%">
+      <input matInput placeholder="Código da sala" formControlName="roomIdentifier" required>
+    </mat-form-field>
+
+    <div class="button-row">
+      <button type="button" class="btn-cancel" mat-button (click)="dialogRef.close(true)">{{('Cancel' | translate).toUpperCase()}}</button>
+      <button type="submit" class="btn-ok" mat-button color="primary" [disabled]="!form.dirty">{{('Login' | translate).toUpperCase()}}</button>
+    </div>
+
+  </form>
+
+</div>

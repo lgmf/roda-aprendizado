@@ -9,5 +9,8 @@
 	"ConfirmDialog": "Confirmation Dialog",
 	"SelectAnOptionAndOpendTheConsole": "Select an option and open console",
 	"Ok": "Ok",
-	"ChangeLanguageTo": "Change language to:"
+	"ChangeLanguageTo": "Change language to:",
+	"RegisterMessage":"Aren't user yet? Sign up now!",
+	"ForgotPassword":"Forgot your password",
+	"LoginWithCode": "Login with a code"
 }
