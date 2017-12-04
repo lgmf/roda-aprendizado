@@ -1,6 +1,35 @@
-<div class="container">
-	<button mat-raised-button color="primary" (click)="login()">{{'Login' | translate}}</button>
-	<ul>
-		<li *ngFor="let item of items">{{ item }}</li>
-	</ul>
+<div class="container" fxLayout="row" fxLayoutAlign="center center">
+	<mat-card class="login-card">
+
+		<mat-progress-bar mode="indeterminate" *ngIf="showProgress"></mat-progress-bar>
+
+		<mat-card-header>
+			<mat-card-title>Login</mat-card-title>
+		</mat-card-header>
+
+		<mat-card-content>
+			<form class="example-form" [formGroup]="loginForm" no-validate (submit)="login()">
+				<div fxLayout="column">
+					<mat-form-field fxFlex="100%">
+						<input matInput type="email" placeholder="Email" formControlName="email" required>
+						<mat-icon matSuffix>person</mat-icon>
+					</mat-form-field>
+
+					<mat-form-field fxFlex="100%">
+						<input matInput type="password" placeholder="Password" formControlName="password" required>
+						<mat-icon matSuffix>lock</mat-icon>
+					</mat-form-field>
+				</div>
+
+				<div class="button-row" fxLayout="column" fxLayoutAlign="center center">
+					<button mat-raised-button color="primary" type="submit">{{ 'Login' | translate }}</button>
+					<a mat-button [routerLink]="['/register']">{{ 'RegisterMessage' | translate }}</a>
+					<a mat-button (click)="resetPassword()">{{ 'ForgotPassword' | translate }}</a>
+					<a mat-button (click)="loginWithRoomIdentifier()">{{ 'LoginWithCode' | translate }}</a>
+				</div>
+
+			</form>
+		</mat-card-content>
+
+	</mat-card>
 </div>
