@@ -1,3 +1,4 @@
+
 import { NgModule, Injector } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule, XHRBackend, RequestOptions, Http } from '@angular/http';
@@ -23,6 +24,7 @@ import { environment } from '../environments/environment';
 import { LoginAuthGuard } from './shared/services/auth/auth-login.guard';
 import { HttpInterceptor } from './shared/services/http/http-interceptor.service';
 import { CoreModule } from './core/core.module';
+import { RoomsModule } from './rooms/rooms.module';
 
 
 export function HttpInterceptorFactory(backend: XHRBackend, options: RequestOptions, router: Router, injector: Injector) {
@@ -53,10 +55,11 @@ export function HttpLoaderFactory(http: HttpClient) {
 			}
 		}),
 		AngularFireModule.initializeApp(environment.firebase),
-		AngularFireDatabaseModule		
+		AngularFireDatabaseModule,
+		RoomsModule		
 	],
 	declarations: [
-		AppComponent				
+		AppComponent			
 	],
 	providers: [
 		{ provide: Http, useFactory: HttpInterceptorFactory, deps: [XHRBackend, RequestOptions, Router, Injector] }

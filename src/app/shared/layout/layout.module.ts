@@ -4,13 +4,19 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { MaterialModule } from '../material/material.module';
 
+import { RoomsModule } from '../../rooms/rooms.module'
+
 import { LayoutComponent } from './layout.component';
+
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
 	imports: [
 		MaterialModule,
 		RouterModule,
-		TranslateModule
+		TranslateModule,
+		FlexLayoutModule,
+		RoomsModule
 	],
 	declarations: [
 		LayoutComponent
