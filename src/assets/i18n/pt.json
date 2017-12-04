@@ -9,5 +9,7 @@
 	"ConfirmDialog": "Caixa de Confirmação",
 	"SelectAnOptionAndOpendTheConsole": "Selecione uma opção e abra o console",
 	"Ok": "Ok",
-	"ChangeLanguageTo": "Mudar idioma para:"
+	"ChangeLanguageTo": "Mudar idioma para:",
+	"ShareIdea": "Compartilhe sua ideia",
+	"Send":"Enviar"
 }
