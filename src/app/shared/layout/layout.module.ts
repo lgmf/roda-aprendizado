@@ -6,11 +6,14 @@ import { MaterialModule } from '../material/material.module';
 
 import { LayoutComponent } from './layout.component';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 @NgModule({
 	imports: [
 		MaterialModule,
 		RouterModule,
-		TranslateModule
+		TranslateModule,
+		FlexLayoutModule
 	],
 	declarations: [
 		LayoutComponent

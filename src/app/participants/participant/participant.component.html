@@ -1,0 +1,20 @@
+<div fxLayoutAlign="center" style="margin:5%">
+  <mat-card class="example-card" style="width: 80%">
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <mat-card-title>Nome da sala</mat-card-title>
+      <mat-card-subtitle>Assunto Atual</mat-card-subtitle>
+    </div>
+    <mat-card-content>
+      <form class="example-form">
+        <div fxLayout="row">
+          <mat-form-field class="example-full-width" style="width: 100%">
+            <textarea matInput placeholder="{{'ShareIdea' | translate}}"></textarea>
+          </mat-form-field>
+        </div>
+      </form>
+    </mat-card-content>
+    <div fxLayout="row">
+      <button mat-raised-button color="primary">{{'Send' | translate}}</button>
+    </div>
+  </mat-card>
+</div>

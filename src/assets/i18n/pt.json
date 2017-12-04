@@ -12,5 +12,7 @@
 	"ChangeLanguageTo": "Mudar idioma para:",
 	"RegisterMessage": "Não é usuário ainda? Registre-se agora!",
 	"ForgotPassword": "Esqueceu a senha",
-	"LoginWithCode": "Entre com um código"
+	"LoginWithCode": "Entre com um código",
+	"ShareIdea": "Compartilhe sua ideia",
+	"Send":"Enviar"
 }

@@ -21,6 +21,8 @@ import { HttpInterceptor } from './shared/services/http/http-interceptor.service
 import { CoreModule } from './core/core.module';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment.prod';
+import { ParticipantsModule } from './participants/participants.module';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 
 export function HttpInterceptorFactory(backend: XHRBackend, options: RequestOptions, router: Router, injector: Injector) {
@@ -50,7 +52,9 @@ export function HttpLoaderFactory(http: HttpClient) {
 				deps: [HttpClient]
 			}
 		}),
-		AngularFireModule.initializeApp(environment.firebase)
+		AngularFireModule.initializeApp(environment.firebase),
+		AngularFireDatabaseModule,
+		ParticipantsModule		
 	],
 	declarations: [
 		AppComponent				

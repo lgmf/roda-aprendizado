@@ -12,5 +12,7 @@
 	"ChangeLanguageTo": "Change language to:",
 	"RegisterMessage":"Aren't user yet? Sign up now!",
 	"ForgotPassword":"Forgot your password",
-	"LoginWithCode": "Login with a code"
+	"LoginWithCode": "Login with a code",
+	"ShareIdea":"Share your Idea",
+	"Send":"Send"
 }
