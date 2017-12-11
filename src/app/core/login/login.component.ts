@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 				this.showProgress = false;
 				localStorage.setItem('currentUser', rs.uid);
 				localStorage.setItem('isAnonymous', 'false');
-				this.router.navigateByUrl(`/users`);
+				this.router.navigateByUrl(`/`);
 			})
 			.catch(error => {
 				this.showProgress = false;

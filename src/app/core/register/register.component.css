@@ -1,0 +1,12 @@
+.container {	
+	height: 100%;		
+	background-image: url('/assets/images/moonlight_night-wallpaper-1920x1080.jpg');	
+}
+
+.button-row button{
+	margin-top: 1vh;
+}
+
+.button-row a{
+	margin-top: 1vh;
+}

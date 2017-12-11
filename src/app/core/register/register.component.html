@@ -1,3 +1,43 @@
-<p>
-  register works!
-</p>
+<div class="container" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="login-card">
+
+    <mat-progress-bar mode="indeterminate" *ngIf="showProgress"></mat-progress-bar>
+
+    <mat-card-header>
+      <mat-card-title>Registro</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form class="example-form" [formGroup]="registerForm" no-validate (submit)="finishRegister()">
+        <div fxLayout="column">
+
+          <mat-form-field fxFlex="100%">
+            <input matInput type="email" placeholder="Email" formControlName="email" required>
+            <mat-icon matSuffix>person</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field fxFlex="100%">
+            <input matInput type="password" placeholder="Senha" formControlName="password" required>
+            <mat-icon matSuffix>lock</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field fxFlex="100%">
+            <input matInput type="password" placeholder="Confirmar Senha" formControlName="confirmPassword" required>
+            <mat-icon matSuffix>lock</mat-icon>
+          </mat-form-field>
+        </div>
+
+        <div class="button-row" fxLayout="row" fxLayoutAlign="space-between">
+          <a mat-fab [routerLink]="['/login']">
+            <mat-icon>keyboard_backspace</mat-icon>
+          </a>
+          <button mat-fab color="primary" type="submit">
+            <mat-icon>done</mat-icon>
+          </button>
+        </div>
+
+      </form>
+    </mat-card-content>
+
+  </mat-card>
+</div>
